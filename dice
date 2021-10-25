@@ -22,6 +22,14 @@ int main() {
 of faces on the dice*/
     counter = 0;
     faces = 6;
+
+/*assigns the value 0 to all of these variables*/
+    onec = 0;
+    twoc = 0;
+    threec = 0;
+    fourc = 0;
+    fivec = 0;
+    sixc = 0;
     
 /*this allows the user to decide the number of throws they get*/
     printf("how many throws would you like?\n");
@@ -30,14 +38,23 @@ of faces on the dice*/
     printf("Number of faces: %d\n", faces);
     printf("Number of throws: %d\n", throws);
     
+    /*this is used before rand() to make sure that
+    everytime the code is compiled, the numbers
+    generated are random everytime*/
+    srand(time(0));
+
     /*while loop to print the result from each throw*/
     while (counter != throws){
         counter += 1;
         num = rand() % 7;
         printf("%d\n", num);
 
+
+
+
         if (num == 1) {
           onec += 1;
+          printf("\noccurance: %d\n", onec);
         }
         if (num == 2) {
           twoc += 1;
@@ -54,6 +71,19 @@ of faces on the dice*/
         if (num == 6) {
           sixc += 1;
         }
+
+
+    /*the percentage results of the occurance of certain rolls 
+    being stored in the result variables*/
+    onecr = (onec/throws)*100;
+    twocr = (twoc/throws)*100;
+    threecr = (threec/throws)*100;
+    fourcr = (fourc/throws)*100;
+    fivecr = (fivec/throws)*100;
+    sixcr = (sixc/throws)*100;
+
+
+
 
     }
     
