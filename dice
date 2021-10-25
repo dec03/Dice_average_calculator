@@ -1,4 +1,3 @@
-// Online C compiler to run C program online
 #include <stdio.h>
 
 /*this imports the random module for c*/
@@ -45,13 +44,19 @@ of faces on the dice*/
     /*while loop to print the result from each throw*/
     while (counter != throws)
     {
+      /*the counter increments everytime the code passes through so it will
+      stop when the counter is equal to the amount of throws*/
       counter += 1;
-      num = rand() % 7;
+      /*this assigns the random number to the variable num temporarily,
+      until the code passes through the while loop again*/
+      num = rand() % 6 + 1;
       printf("%d\n", num);
 
 
 
-
+    /*this increments/adds one to the amount of occurances of either 1,2
+    3,4,5 or 6, so if 1 occurs five times, the value for the
+    counter for one (onec) will be 5*/
       if (num == 1) {
         onec += 1;
       }
@@ -75,8 +80,9 @@ of faces on the dice*/
 
     }
 
-    /*the percentage results of the occurance of certain rolls 
-    being stored in the result variables*/
+    /*this assigns the value of the percentage of 
+    the different results from certain rolls to their corresponding 
+    variables*/
     onecr = (onec/throws)*100;
     twocr = (twoc/throws)*100;
     threecr = (threec/throws)*100;
@@ -84,7 +90,10 @@ of faces on the dice*/
     fivecr = (fivec/throws)*100;
     sixcr = (sixc/throws)*100;
 
-    printf("Occurance of %d: %f%c\n", 1, onecr, percent);
+    /*this prints out the results of the percentage of
+    occurances of each number*/
+
+    printf("Occurance of %d: %f\n", 1, onecr);
     printf("Occurance of %d: %f\n", 2, twocr);
     printf("Occurance of %d: %f\n", 3, threecr);
     printf("Occurance of %d: %f\n", 4, fourcr);
