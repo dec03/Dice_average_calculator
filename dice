@@ -12,12 +12,11 @@ int main() {
     int counter;
     float percentage;
     /*this is to count the amount of ones, twos, threes, etc*/
-    int onec, twoc, threec, fourc, fivec, sixc;
+    float onec, twoc, threec, fourc, fivec, sixc;
     /*this is to store the result of the amount of ones, twos
     etc to calculate the percentage*/
-    int onecr, twocr, threecr, fourcr, fivecr, sixcr;
+    float onecr, twocr, threecr, fourcr, fivecr, sixcr;
 
-    
 /*assigns the value 0 to counter and the value 6 to the number
 of faces on the dice*/
     counter = 0;
@@ -44,34 +43,37 @@ of faces on the dice*/
     srand(time(0));
 
     /*while loop to print the result from each throw*/
-    while (counter != throws){
-        counter += 1;
-        num = rand() % 7;
-        printf("%d\n", num);
+    while (counter != throws)
+    {
+      counter += 1;
+      num = rand() % 7;
+      printf("%d\n", num);
 
 
 
 
-        if (num == 1) {
-          onec += 1;
-          printf("\noccurance: %d\n", onec);
-        }
-        if (num == 2) {
-          twoc += 1;
-        }
-        if (num == 3) {
-          threec += 1;
-        }
-        if (num == 4) {
-          fourc += 1;
-        }
-        if (num == 5) {
-          fivec += 1;
-        }
-        if (num == 6) {
-          sixc += 1;
-        }
+      if (num == 1) {
+        onec += 1;
+      }
+      if (num == 2) {
+        twoc += 1;
+      }
+      if (num == 3) {
+        threec += 1;
+      }
+      if (num == 4) {
+        fourc += 1;
+      }
+      if (num == 5) {
+        fivec += 1;
+      }
+      if (num == 6) {
+        sixc += 1;
+      }
 
+
+
+    }
 
     /*the percentage results of the occurance of certain rolls 
     being stored in the result variables*/
@@ -82,11 +84,13 @@ of faces on the dice*/
     fivecr = (fivec/throws)*100;
     sixcr = (sixc/throws)*100;
 
+    printf("Occurance of %d: %f%c\n", 1, onecr, percent);
+    printf("Occurance of %d: %f\n", 2, twocr);
+    printf("Occurance of %d: %f\n", 3, threecr);
+    printf("Occurance of %d: %f\n", 4, fourcr);
+    printf("Occurance of %d: %f\n", 5, fivecr);
+    printf("Occurance of %d: %f\n", 6, sixcr);
 
-
-
-    }
-    
     
     
     return 0;
