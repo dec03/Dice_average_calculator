@@ -11,7 +11,11 @@ int main() {
     int faces, throws, num;
     int counter;
     float percentage;
+    /*this is to count the amount of ones, twos, threes, etc*/
     int onec, twoc, threec, fourc, fivec, sixc;
+    /*this is to store the result of the amount of ones, twos
+    etc to calculate the percentage*/
+    int onecr, twocr, threecr, fourcr, fivecr, sixcr;
 
     
 /*assigns the value 0 to counter and the value 6 to the number
@@ -26,7 +30,7 @@ of faces on the dice*/
     printf("Number of faces: %d\n", faces);
     printf("Number of throws: %d\n", throws);
     
-    
+    /*while loop to print the result from each throw*/
     while (counter != throws){
         counter += 1;
         num = rand() % 7;
@@ -34,7 +38,21 @@ of faces on the dice*/
 
         if (num == 1) {
           onec += 1;
-          printf("Occurance of 1: 16.66");
+        }
+        if (num == 2) {
+          twoc += 1;
+        }
+        if (num == 3) {
+          threec += 1;
+        }
+        if (num == 4) {
+          fourc += 1;
+        }
+        if (num == 5) {
+          fivec += 1;
+        }
+        if (num == 6) {
+          sixc += 1;
         }
 
     }
