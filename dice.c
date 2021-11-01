@@ -12,9 +12,11 @@ int main(){
     int output_count;
     float percentage;
 
+
 /*this assigns array as a float to store up to 25 float values, and i is an index that is stored as an integer to point to an item inside the array*/
     float array[25];
     int i;
+
 
 /*this variable will be used to count the amount of ones, twos, threes, etc, thrown*/
     float onec, twoc, threec, fourc, fivec, sixc, sevenc, eightc, ninec, tenc, elevenc, twelvec, thirteenc, fourteenc, fifteenc, sixteenc, seventeenc, eighteenc, nineteenc, twentyc, twentyonec, twentytwoc, twentythreec, twentyfourc, twentyfivec;
@@ -24,6 +26,8 @@ int main(){
 etc to calculate the percentage*/
     float onecr, twocr, threecr, fourcr, fivecr, sixcr,sevencr, eightcr, ninecr, tencr, elevencr,twelvecr, thirteencr, fourteencr, fifteencr, sixteencr, seventeencr, eighteencr, nineteencr, twentycr, twentyonecr, twentytwocr, twentythreecr, twentyfourcr, twentyfivecr;
 
+
+
 /*assigns the value 0 to counter and the value 6 to the number
 of faces on the dice*/
     counter = 0;
@@ -31,6 +35,8 @@ of faces on the dice*/
     faces = 0;
     throws = 0;
     output_count = 1;
+
+
 
 /*assigns the value 0 to all of these variables*/
     onec = 0;
@@ -58,6 +64,7 @@ of faces on the dice*/
     twentythreec = 0;
     twentyfourc = 0;
     twentyfivec = 0;
+
 
 /*this allows the user to decide the number of faces they get*/
   printf("how many faces would you like?\n");
@@ -193,6 +200,10 @@ of faces on the dice*/
       }
     }
 
+
+
+
+
     /*this assigns the value of the percentage of 
     the different results from certain rolls to their corresponding 
     variables*/
@@ -251,15 +262,21 @@ of faces on the dice*/
     array[24] = twentyfourcr;
     array[25] = twentyfivecr;
 
+
     /*this prints out the results of the percentage of
     occurances of each number by using a for loop*/
-    /*this for loop will output the occurance of each number of faces that the user inputs and will increment the index of the array to output the corresponding value*/
 
-    for (i = 0; i < faces; i++){
+    /*this for loop will output the occurance of each number of faces (output_count from 1 to number of faces)
+     that the user inputs and will increment both the index of the array and the output_count to output the corresponding value*/
+
+    for (i = 0; i < faces; i++)
+    {
       printf("Occurance of %d: %f\n", output_count, array[i]);
       output_count += 1;
     }
     
+
+
 
     /*this terminates the program so it will no return back to the beggining of the function */
     exit(0);
