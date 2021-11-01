@@ -4,25 +4,33 @@
 #include <stdlib.h>
 
 /*this is the defined function*/
-int main() {
+int main(){
 
-/*this assigns the variables faces, throws and counter as integers*/
+/*this assigns the variables faces, throws, counter, count and output_count as integers*/
     int faces, throws, num;
-    int counter;
+    int counter, count;
+    int output_count;
     float percentage;
 
-    /*this variable will be used to count the amount of ones, twos, threes, etc, thrown*/
+/*this assigns array as a float to store up to 25 float values, and i is an index that is stored as an integer to point to an item inside the array*/
+    float array[25];
+    int i;
+
+/*this variable will be used to count the amount of ones, twos, threes, etc, thrown*/
     float onec, twoc, threec, fourc, fivec, sixc, sevenc, eightc, ninec, tenc, elevenc, twelvec, thirteenc, fourteenc, fifteenc, sixteenc, seventeenc, eighteenc, nineteenc, twentyc, twentyonec, twentytwoc, twentythreec, twentyfourc, twentyfivec;
 
 
-    /*this is to store the result of the amount of ones, twos
-    etc to calculate the percentage*/
+/*this is to store the result of the amount of ones, twos
+etc to calculate the percentage*/
     float onecr, twocr, threecr, fourcr, fivecr, sixcr,sevencr, eightcr, ninecr, tencr, elevencr,twelvecr, thirteencr, fourteencr, fifteencr, sixteencr, seventeencr, eighteencr, nineteencr, twentycr, twentyonecr, twentytwocr, twentythreecr, twentyfourcr, twentyfivecr;
 
 /*assigns the value 0 to counter and the value 6 to the number
 of faces on the dice*/
     counter = 0;
+    count = 0;
     faces = 0;
+    throws = 0;
+    output_count = 1;
 
 /*assigns the value 0 to all of these variables*/
     onec = 0;
@@ -52,30 +60,30 @@ of faces on the dice*/
     twentyfivec = 0;
 
 /*this allows the user to decide the number of faces they get*/
-    printf("how many faces would you like?\n");
-    scanf("%d", &faces);
+  printf("how many faces would you like?\n");
+  scanf("%d", &faces);
 
-  if (faces < 1){
-    printf("Enter a number greater than 1 and less than 25\n");
-    main();
-  }
-  else if (faces >25){
-    printf("Enter a number greater than 1 and less than 25\n");
-    main();
-  }
-    
+    if (faces < 1){
+      printf("Enter a number greater than 1 and less than 25\n");
+      main();
+    }
+    else if (faces >25){
+      printf("Enter a number greater than 1 and less than 25\n");
+      main();
+    }
+      
 
 /*this allows the user to decide the number of throws they get*/
-    printf("how many throws would you like?\n");
-    scanf("%d", &throws);
+  printf("how many throws would you like?\n");
+  scanf("%d", &throws);
 
     if (throws < 1){
-    printf("Enter a number greater than 1 and less than 500\n");
-    main();
+      printf("Enter a number greater than 1 and less than 500\n");
+      main();
   }
-  else if (throws >500){
-    printf("Enter a number greater than 1 and less than 500\n");
-    main();
+    else if (throws >500){
+      printf("Enter a number greater than 1 and less than 500\n");
+      main();
   }
     
     printf("Number of faces: %d\n", faces);
@@ -189,7 +197,6 @@ of faces on the dice*/
     the different results from certain rolls to their corresponding 
     variables*/
 
-
     onecr = (onec/throws)*100;
     twocr = (twoc/throws)*100;
     threecr = (threec/throws)*100;
@@ -216,37 +223,43 @@ of faces on the dice*/
     twentyfourcr = (twentyfourc/throws)*100;
     twentyfivecr = (twentyfivec/throws)*100;
 
-
+    /*this assigns the correct values to the correct index inside the array*/
+    array[0] = 0;
+    array[1] = onecr;
+    array[2] = twocr;
+    array[3] = threecr;
+    array[4] = fourcr;
+    array[5] = fivecr;
+    array[6] = sixcr;
+    array[7] = sevencr;
+    array[8] = eightcr;
+    array[9] = ninecr;
+    array[10] = tencr;
+    array[11] = elevencr;
+    array[12] = twelvecr;
+    array[13] = thirteencr;
+    array[14] = fourcr;
+    array[15] = fifteencr;
+    array[16] = sixteencr;
+    array[17] = sevencr;
+    array[18] = eighteencr;
+    array[19] = nineteencr;
+    array[20] = twentycr;
+    array[21] = twentyonecr;
+    array[22] = twentytwocr;
+    array[23] = twentythreecr;
+    array[24] = twentyfourcr;
+    array[25] = twentyfivecr;
 
     /*this prints out the results of the percentage of
-    occurances of each number*/
+    occurances of each number by using a for loop*/
+    /*this for loop will output the occurance of each number of faces that the user inputs and will increment the index of the array to output the corresponding value*/
 
-
-    printf("Occurance of %d: %f\n", 1, onecr);
-    printf("Occurance of %d: %f\n", 2, twocr);
-    printf("Occurance of %d: %f\n", 3, threecr);
-    printf("Occurance of %d: %f\n", 4, fourcr);
-    printf("Occurance of %d: %f\n", 5, fivecr);
-    printf("Occurance of %d: %f\n", 6, sixcr);
-    printf("Occurance of %d: %f\n", 7, sevencr);
-    printf("Occurance of %d: %f\n", 8, eightcr);
-    printf("Occurance of %d: %f\n", 9, ninecr);
-    printf("Occurance of %d: %f\n", 10, tencr);
-    printf("Occurance of %d: %f\n", 11, elevencr);
-    printf("Occurance of %d: %f\n", 12, twelvecr);
-    printf("Occurance of %d: %f\n", 13, thirteencr);
-    printf("Occurance of %d: %f\n", 14, fourteencr);
-    printf("Occurance of %d: %f\n", 15, fifteencr);
-    printf("Occurance of %d: %f\n", 16, sixteencr);
-    printf("Occurance of %d: %f\n", 17, seventeencr);
-    printf("Occurance of %d: %f\n", 18, eighteencr);
-    printf("Occurance of %d: %f\n", 19, nineteencr);
-    printf("Occurance of %d: %f\n", 20, twentycr);
-    printf("Occurance of %d: %f\n", 21, twentyonecr);
-    printf("Occurance of %d: %f\n", 22, twentytwocr);
-    printf("Occurance of %d: %f\n", 23, twentythreecr);
-    printf("Occurance of %d: %f\n", 24, twentyfourcr);
-    printf("Occurance of %d: %f\n", 25, twentyfivecr);
+    for (i = 0; i < faces; i++){
+      printf("Occurance of %d: %f\n", output_count, array[i]);
+      output_count += 1;
+    }
+    
 
     /*this terminates the program so it will no return back to the beggining of the function */
     exit(0);
