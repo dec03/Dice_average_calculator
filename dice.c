@@ -268,8 +268,7 @@ of faces on the dice*/
 
     /*this for loop will output the occurance of each number of faces (output_count from 1 to number of faces)
      that the user inputs and will increment both the index of the array and the output_count to output the corresponding value*/
-
-    for (i = 0; i < faces; i++)
+    for (i = 1; i <= faces; i++)
     {
       printf("Occurance of %d: %f\n", output_count, array[i]);
       output_count += 1;
