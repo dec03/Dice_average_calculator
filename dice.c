@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+/*add || and && and double for precision*/
+
 /*this imports the random module for c*/
 #include <stdlib.h>
 
