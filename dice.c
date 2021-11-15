@@ -6,7 +6,8 @@
 /*this is the defined function*/
 int main(){
 
-/*this assigns the variables faces, throws, counter, count and output_count as integers*/
+/*this assigns the variables faces, throws, counter, count and output_count as integers
+and percentage as a float*/
     int faces, throws, num;
     int counter, count;
     int output_count;
@@ -28,8 +29,8 @@ etc to calculate the percentage*/
 
 
 
-/*assigns the value 0 to counter and the value 6 to the number
-of faces on the dice*/
+/*assigns the value 0 to all of these variable but output_count as this will be used
+as a place holder to output the number that is going to be printed out.*/
     counter = 0;
     count = 0;
     faces = 0;
