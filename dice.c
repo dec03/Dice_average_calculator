@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 /*add || and && and double for precision*/
+//add for loop for adding items into array
 
 /*this imports the random module for c*/
 #include <stdlib.h>
