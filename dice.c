@@ -1,16 +1,14 @@
 #include <stdio.h>
 
-/*add || and && and double for precision*/
-//add for loop for adding items into array
 
-/*this imports the random module for c*/
+//this imports the random module for c
 #include <stdlib.h>
 
-/*this is the defined function*/
+
+//this is the defined function
 int main(){
 
-/*this assigns the variables faces, throws, counter, count and output_count as integers
-and percentage as a float*/
+//this assigns the variables faces, throws, counter, count and output_count as integers
     int faces, throws, num;
     int counter, count;
     int output_count;
@@ -21,6 +19,9 @@ and percentage as a float*/
     float array[25];
     int i;
 
+//this assigns calc as a float to store up to 25 float values for the percentages of the occurances
+    float calc[25];
+    int x;
 
 /*this variable will be used to count the amount of ones, twos, threes, etc, thrown*/
     float onec, twoc, threec, fourc, fivec, sixc, sevenc, eightc, ninec, tenc, elevenc, twelvec, thirteenc, fourteenc, fifteenc, sixteenc, seventeenc, eighteenc, nineteenc, twentyc, twentyonec, twentytwoc, twentythreec, twentyfourc, twentyfivec;
@@ -32,8 +33,8 @@ etc to calculate the percentage*/
 
 
 
-/*assigns the value 0 to all of these variable but output_count as this will be used
-as a place holder to output the number that is going to be printed out.*/
+/*assigns the value 0 to counter and the value 6 to the number
+of faces on the dice*/
     counter = 0;
     count = 0;
     faces = 0;
@@ -42,7 +43,7 @@ as a place holder to output the number that is going to be printed out.*/
 
 
 
-/*assigns the value 0 to all of these variables*/
+//assigns the value 0 to all of these variables
     onec = 0;
     twoc = 0;
     threec = 0;
@@ -74,29 +75,25 @@ as a place holder to output the number that is going to be printed out.*/
   printf("how many faces would you like?\n");
   scanf("%d", &faces);
 
-    if (faces < 1){
+    if (faces < 1 || faces > 25){
       printf("Enter a number greater than 1 and less than 25\n");
       main();
     }
-    else if (faces >25){
-      printf("Enter a number greater than 1 and less than 25\n");
-      main();
-    }
+
       
 
 /*this allows the user to decide the number of throws they get*/
   printf("how many throws would you like?\n");
   scanf("%d", &throws);
 
-    if (throws < 1){
-      printf("Enter a number greater than 1 and less than 500\n");
-      main();
-  }
-    else if (throws >500){
+    if (throws < 1 || throws > 500){
       printf("Enter a number greater than 1 and less than 500\n");
       main();
   }
     
+
+
+
     printf("Number of faces: %d\n", faces);
     printf("Number of throws: %d\n", throws);
     
@@ -105,19 +102,16 @@ as a place holder to output the number that is going to be printed out.*/
 
 
 
-    /*this is used before rand() to make sure that
-    everytime the code is compiled, the numbers
-    generated are random everytime*/
+    //this is used before rand() to make sure that everytime the code is compiled, the numbers generated are random everytime
     srand(time(0));
 
-    /*while loop to print the result from each throw*/
+    //while loop to print the result from each throw
     while (counter != throws)
     {
-      /*the counter increments everytime the code passes through so it will
-      stop when the counter is equal to the amount of throws*/
+      //the counter increments everytime the code passes through so it will stop when the counter is equal to the amount of throws
       counter += 1;
-      /*this assigns the random number to the variable num temporarily,
-      until the code passes through the while loop again*/
+
+      //this assigns the random number to the variable num temporarily, until the code passes through the while loop again
       num = rand() % faces + 1;
       printf("%d\n", num);
 
@@ -205,13 +199,9 @@ as a place holder to output the number that is going to be printed out.*/
     }
 
 
-
-
-
-    /*this assigns the value of the percentage of 
-    the different results from certain rolls to their corresponding 
-    variables*/
-
+    //this assigns the value of the percentage of the different results from certain rolls to their corresponding variables
+ 
+    /*
     onecr = (onec/throws)*100;
     twocr = (twoc/throws)*100;
     threecr = (threec/throws)*100;
@@ -237,51 +227,60 @@ as a place holder to output the number that is going to be printed out.*/
     twentythreecr = (twentythreec/throws)*100;
     twentyfourcr = (twentyfourc/throws)*100;
     twentyfivecr = (twentyfivec/throws)*100;
+    */
 
-    /*this assigns the correct values to the correct index inside the array*/
+    //this assigns the correct values to the correct index inside the array
+
     array[0] = 0;
-    array[1] = onecr;
-    array[2] = twocr;
-    array[3] = threecr;
-    array[4] = fourcr;
-    array[5] = fivecr;
-    array[6] = sixcr;
-    array[7] = sevencr;
-    array[8] = eightcr;
-    array[9] = ninecr;
-    array[10] = tencr;
-    array[11] = elevencr;
-    array[12] = twelvecr;
-    array[13] = thirteencr;
-    array[14] = fourcr;
-    array[15] = fifteencr;
-    array[16] = sixteencr;
-    array[17] = sevencr;
-    array[18] = eighteencr;
-    array[19] = nineteencr;
-    array[20] = twentycr;
-    array[21] = twentyonecr;
-    array[22] = twentytwocr;
-    array[23] = twentythreecr;
-    array[24] = twentyfourcr;
-    array[25] = twentyfivecr;
+    array[1] = onec;
+    array[2] = twoc;
+    array[3] = threec;
+    array[4] = fourc;
+    array[5] = fivec;
+    array[6] = sixc;
+    array[7] = sevenc;
+    array[8] = eightc;
+    array[9] = ninec;
+    array[10] = tenc;
+    array[11] = elevenc;
+    array[12] = twelvec;
+    array[13] = thirteenc;
+    array[14] = fourc;
+    array[15] = fifteenc;
+    array[16] = sixteenc;
+    array[17] = sevenc;
+    array[18] = eighteenc;
+    array[19] = nineteenc;
+    array[20] = twentyc;
+    array[21] = twentyonec;
+    array[22] = twentytwoc;
+    array[23] = twentythreec;
+    array[24] = twentyfourc;
+    array[25] = twentyfivec;
 
 
-    /*this prints out the results of the percentage of
-    occurances of each number by using a for loop*/
+    //this for loop will get the count of each number that was thrown that is stored in array[], and store the percentage of the occurances for each number in calc[]
+    for (x = 0; x <= faces; x++) {
+        calc[x] = (array[x]/throws)*100;
+    }
 
-    /*this for loop will output the occurance of each number of faces (output_count from 1 to number of faces)
-     that the user inputs and will increment both the index of the array and the output_count to output the corresponding value*/
-    for (i = 1; i <= faces; i++)
+
+    //this prints out the results of the percentage of occurances of each number by using a for loop
+
+    /*this for loop will output the occurance of each number of faces (output_count from 1 to number of faces) 
+    that the user inputed and will increment both the percentage at the index of the array and the output_count to 
+    output the corresponding value*/
+    for (x = 1; x <= faces; x++)
     {
-      printf("Occurance of %d: %f\n", output_count, array[i]);
+    //%0.2f%% is used to format the float to two significant figures
+      printf("Occurance of %d: %0.2f%%\n", output_count, calc[x]);
       output_count += 1;
     }
     
 
 
 
-    /*this terminates the program so it will no return back to the beggining of the function */
+    //this terminates the program so it will no return back to the beggining of the function
     exit(0);
     
     
