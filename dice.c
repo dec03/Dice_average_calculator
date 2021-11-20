@@ -199,35 +199,6 @@ of faces on the dice*/
     }
 
 
-    //this assigns the value of the percentage of the different results from certain rolls to their corresponding variables
- 
-    /*
-    onecr = (onec/throws)*100;
-    twocr = (twoc/throws)*100;
-    threecr = (threec/throws)*100;
-    fourcr = (fourc/throws)*100;
-    fivecr = (fivec/throws)*100;
-    sixcr = (sixc/throws)*100;
-    sevencr = (sevenc/throws)*100;
-    eightcr = (eightc/throws)*100;
-    ninecr = (ninec/throws)*100;
-    tencr = (tenc/throws)*100;
-    elevencr = (elevenc/throws)*100;
-    twelvecr = (twelvec/throws)*100;
-    thirteencr = (thirteenc/throws)*100;
-    fourteencr = (fourteenc/throws)*100;
-    fifteencr = (fifteenc/throws)*100;
-    sixteencr = (sixteenc/throws)*100;
-    seventeencr = (seventeenc/throws)*100;
-    eighteencr = (eighteenc/throws)*100;
-    nineteencr = (nineteenc/throws)*100;
-    twentycr = (twentyc/throws)*100;
-    twentyonecr = (twentyonec/throws)*100;
-    twentytwocr = (twentytwoc/throws)*100;
-    twentythreecr = (twentythreec/throws)*100;
-    twentyfourcr = (twentyfourc/throws)*100;
-    twentyfivecr = (twentyfivec/throws)*100;
-    */
 
     //this assigns the correct values to the correct index inside the array
 
